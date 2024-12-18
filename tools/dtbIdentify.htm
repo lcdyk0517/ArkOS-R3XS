@@ -126,10 +126,10 @@
         <form id="uploadForm" enctype="multipart/form-data">
             <label for="fileInput">Upload DTB File:</label><br>
             <input type="file" id="fileInput" name="fileInput" accept=".dtb"><br><br>
-            <button id="identifyButton" type="submit">Identify My Screen</button>
+            <button id="identifyButton" type="submit">验证屏幕</button>
         </form>
        <div id="instructions">
-    <p>Instructions:</p>
+    <!-- <p>Instructions:</p>
     <ol>
         <li>Look for the DTB files on your SD card's boot partition.</li>
         <li>Upload <span class="bold-dtb">"rk3326-r35s-linux.dtb"</span> to this tool.</li>
@@ -140,7 +140,7 @@
         <li>Couldn't find <span class="bold-dtb">"rk3326-r35s-linux.dtb"</span>?</li>
         <li>If you can see <span class="bold-dtb">"rk3326-evb-lp3-v12-linux.dtb"</span> instead, you have a clone.</li>
         <li>Learn more about the R36S Clones <a href="https://ko-fi.com/post/R36S-Clones-Flood-the-Market-How-to-Protect-Yours-Q5Q813CE8Q">here.</a></li>
-    </ol>
+    </ol> -->
 </div>
         <div id="result"></div>
     </div>
@@ -169,20 +169,21 @@
 
         function identifyScreen(uploadedData) {
 		// List of text files to compare against
-			const filesToCompare = ['v0.txt', 'v1.txt', 'v2.txt', 'v3.txt','v3_2.txt', 'v4.txt', 'v4_2.txt', 'oldv1.txt', 'oldv1_2.txt', 'v0_2.txt']; // Add more files if needed
+			const filesToCompare = ['v0.txt', 'v1.txt', 'v2.txt', 'v3.txt','v3_2.txt', 'v4.txt', 'v4_2.txt', 'v4_3.txt', 'oldv1.txt', 'oldv1_2.txt', 'v0_2.txt']; // Add more files if needed
 
 		// Corresponding messages for each file
 			const fileMessages = {
-				'v0.txt': "This is the original R36S Screen.",
-				'v0_2.txt': "This is the original R36S Screen.",
-				'v1.txt': "This is Panel 1.",
-				'v2.txt': "This is Panel 2.",
-				'v3.txt': "This is Panel 3.",
-				'v3_2.txt': "This is Panel 3.",
-				'v4.txt': "This is Panel 4.",
-				'v4_2.txt': "This is Panel 4.",
-				'oldv1.txt': "This is the Original R36S Screen without FN Button.",
-				'oldv1_2.txt': "This is the Original R36S Screen without FN Button."
+				'v0.txt': "这是R36S原始屏幕",
+				'v0_2.txt': "这是R36S原始屏幕",
+				'v1.txt': "这是P1屏幕",
+				'v2.txt': "这是P2屏幕",
+				'v3.txt': "这是P3屏幕",
+				'v3_2.txt': "这是P3屏幕",
+				'v4.txt': "这是P4屏幕",
+				'v4_2.txt': "这是P4屏幕",
+                'v4_3.txt': "这是P4屏幕.",
+				'oldv1.txt': "这是R36S原始屏幕不带FN按键",
+				'oldv1_2.txt': "这是R36S原始屏幕不带FN按键"
 };
 
             for (var i = 0; i < filesToCompare.length; i++) {
