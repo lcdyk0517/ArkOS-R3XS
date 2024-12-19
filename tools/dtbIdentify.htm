@@ -122,9 +122,9 @@
 </script>
     <div id="container">
         <img src="Icon.png" alt="Screen Image" style="width: 300px; height: auto; margin-bottom: 20px;">
-        <h1>Which Screen Do I Have?</h1>
+        <h1>看看你的机器的屏幕类型</h1>
         <form id="uploadForm" enctype="multipart/form-data">
-            <label for="fileInput">Upload DTB File:</label><br>
+            <label for="fileInput">选择dtb文件上传</label><br>
             <input type="file" id="fileInput" name="fileInput" accept=".dtb"><br><br>
             <button id="identifyButton" type="submit">验证屏幕</button>
         </form>
@@ -194,7 +194,7 @@
                     return '<h2 class="message">' + fileMessages[filesToCompare[i]] + '</h2>';
                 }
             }
-            return "The uploaded data does not match the content of any pre-existing file.";
+            return "这个dtb没有和现有的dtb匹配上";
         }
 
         function displayResult(result) {
