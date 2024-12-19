@@ -196,6 +196,7 @@
                 xhr.open('GET', filesToCompare[i], false);
                 xhr.send(null);
                 if (xhr.status === 200 && xhr.responseText === uploadedData) {
+                    console.log(uploadedData);
                     return '<h2 class="message">' + fileMessages[filesToCompare[i]] + '</h2>';
                 }
             }
