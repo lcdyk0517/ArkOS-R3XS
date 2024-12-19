@@ -169,21 +169,22 @@
 
         function identifyScreen(uploadedData) {
 		// List of text files to compare against
-			const filesToCompare = ['v0.txt', 'v1.txt', 'v2.txt', 'v3.txt','v3_2.txt', 'v4.txt', 'v4_2.txt', 'v4_3.txt', 'oldv1.txt', 'oldv1_2.txt', 'v0_2.txt']; // Add more files if needed
+			const filesToCompare = ['clone_v1.txt', 'v0.txt', 'v1.txt', 'v2.txt', 'v3.txt','v3_2.txt', 'v4.txt', 'v4_2.txt', 'v4_3.txt', 'oldv1.txt', 'oldv1_2.txt', 'v0_2.txt']; // Add more files if needed
 
 		// Corresponding messages for each file
 			const fileMessages = {
-				'v0.txt': "这是R36S原始屏幕",
-				'v0_2.txt': "这是R36S原始屏幕",
-				'v1.txt': "这是P1屏幕",
-				'v2.txt': "这是P2屏幕",
-				'v3.txt': "这是P3屏幕",
-				'v3_2.txt': "这是P3屏幕",
-				'v4.txt': "这是P4屏幕",
-				'v4_2.txt': "这是P4屏幕",
-                'v4_3.txt': "这是P4屏幕.",
-				'oldv1.txt': "这是R36S原始屏幕不带FN按键",
-				'oldv1_2.txt': "这是R36S原始屏幕不带FN按键"
+				'v0.txt': "这是R36S原始屏幕。",
+				'v0_2.txt': "这是R36S原始屏幕。",
+				'v1.txt': "这是P1屏幕。",
+				'v2.txt': "这是P2屏幕。",
+				'v3.txt': "这是P3屏幕。",
+				'v3_2.txt': "这是P3屏幕。",
+				'v4.txt': "这是P4屏幕。",
+				'v4_2.txt': "这是P4屏幕。",
+                'v4_3.txt': "这是P4屏幕。",
+				'oldv1.txt': "这是R36S原始屏幕不带FN按键。",
+				'oldv1_2.txt': "这是R36S原始屏幕不带FN按键。",
+                'clone_1.txt': "R36S克隆机 暂不可刷机"
 };
 
             for (var i = 0; i < filesToCompare.length; i++) {
